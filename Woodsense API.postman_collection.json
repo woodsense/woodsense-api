@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "58f4d2dd-fe38-4693-a1a0-7beddaac3013",
+		"name": "Woodsense API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "475443"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "{{email}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://dev.woodsense.com/api/v1/login",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"woodsense",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer sensors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.woodsense.com/api/v1/customers/{{customer_id}}/sensors",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"woodsense",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"{{customer_id}}",
+						"sensors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customer sensor groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.woodsense.com/api/v1/customers/{{customer_id}}/sensor_groups",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"woodsense",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"{{customer_id}}",
+						"sensor_groups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get sensor transmissions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.woodsense.com/api/v1/sensors/{{sensor_id}}/transmissions?from_timestamp=2022-11-01T12:00:00.000Z&to_timestamp=2022-11-08T12:00:00.000Z&limit=10000",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"woodsense",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"sensors",
+						"{{sensor_id}}",
+						"transmissions"
+					],
+					"query": [
+						{
+							"key": "from_timestamp",
+							"value": "2022-11-01T12:00:00.000Z"
+						},
+						{
+							"key": "to_timestamp",
+							"value": "2022-11-08T12:00:00.000Z"
+						},
+						{
+							"key": "limit",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get sensor weather observations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.woodsense.com/api/v1/sensors/{{sensor_id}}/weather?from_timestamp=2022-11-01T12:00:00.000Z&to_timestamp=2022-11-08T12:00:00.000Z&include_humidity=true&include_precip=true&include_temperature=true&limit=10000",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"woodsense",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"sensors",
+						"{{sensor_id}}",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "from_timestamp",
+							"value": "2022-11-01T12:00:00.000Z"
+						},
+						{
+							"key": "to_timestamp",
+							"value": "2022-11-08T12:00:00.000Z"
+						},
+						{
+							"key": "include_humidity",
+							"value": "true"
+						},
+						{
+							"key": "include_precip",
+							"value": "true"
+						},
+						{
+							"key": "include_temperature",
+							"value": "true"
+						},
+						{
+							"key": "limit",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get sensor group transmissions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dev.woodsense.com/api/v1/sensor_groups/{{sensor_group_id}}/transmissions?from_timestamp=2022-11-01T12:00:00.000Z&to_timestamp=2022-11-08T12:00:00.000Z",
+					"protocol": "https",
+					"host": [
+						"dev",
+						"woodsense",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"sensor_groups",
+						"{{sensor_group_id}}",
+						"transmissions"
+					],
+					"query": [
+						{
+							"key": "from_timestamp",
+							"value": "2022-11-01T12:00:00.000Z"
+						},
+						{
+							"key": "to_timestamp",
+							"value": "2022-11-08T12:00:00.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "email",
+			"value": "lasse@woodsense.com"
+		},
+		{
+			"key": "password",
+			"value": ""
+		},
+		{
+			"key": "customer_id",
+			"value": ""
+		},
+		{
+			"key": "sensor_id",
+			"value": ""
+		},
+		{
+			"key": "sensor_group_id",
+			"value": ""
+		}
+	]
+}
