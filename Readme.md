@@ -8,4 +8,4 @@
 
 ## Postman examples (collection)
 
-- [Download](./Woodsense API.postman_collection.json)
+- [Woodsense_API.postman_collection.json](./Woodsense_API.postman_collection.json)
